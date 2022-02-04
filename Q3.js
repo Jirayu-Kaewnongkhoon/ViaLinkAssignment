@@ -130,16 +130,13 @@ const binaryValidCheck = (data) => {
     // กรณีที่ยังติดเงื่อนไขการมี byte 10 อยู่
     // หมายความว่าไม่เป็นไปตามกฎ
     // ก็เท่ากับว่า invalid data
-    if (mustFollowedByOneZero) {
-        console.log('OUTPUT:', false);
-        return;
-    }
+    if (mustFollowedByOneZero) return false;
 
 
     // ถ้าใน byteList มีจุดที่ทำให้ไม่เป็นไปตามกฎ (เป็น false)
     // ก็คือ เป็น invalid data
     // ถ้าไม่มี ก็จะเป็น valid data
-    console.log('OUTPUT:', (byteList.includes(false) ? false : true));
+    return byteList.includes(false) ? false : true;
 
 }
 
@@ -147,4 +144,4 @@ const binaryValidCheck = (data) => {
 const data = [197,130,1];
 // const data = [235,140,4];
 
-binaryValidCheck(data);
+console.log('OUTPUT:', binaryValidCheck(data));

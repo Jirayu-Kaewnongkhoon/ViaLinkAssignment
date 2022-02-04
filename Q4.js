@@ -90,11 +90,11 @@ const findMaxProfit = (prices) => {
 
     })
 
-    console.log('OUTPUT:', maxProfit);
+    return maxProfit;
 }
 
 // ---------------------------------TEST---------------------------------
 const prices = [3,3,5,0,0,3,1,4];
 // const prices = [1,2,3,4,5];
 
-findMaxProfit(prices);
+console.log('OUTPUT:', findMaxProfit(prices));

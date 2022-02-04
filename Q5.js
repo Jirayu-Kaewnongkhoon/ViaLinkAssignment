@@ -100,11 +100,11 @@ const findMinDay = (inputApple) => {
         
     }
         
-    console.log('OUTPUT: ', minDay);
+    return minDay;
 }
 
 
 // ---------------------------------TEST---------------------------------
 const inputApple = 10;
 
-findMinDay(inputApple);
+console.log('OUTPUT: ', findMinDay(inputApple));

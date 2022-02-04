@@ -125,7 +125,7 @@ const findIsland = (grid) => {
         
     }
 
-    console.log('OUTPUT: ', numOfIsland);
+    return numOfIsland;
 }
 
 
@@ -145,4 +145,5 @@ const grid = [
 //     ["0","0","0","1","1"]
 // ]
 
-findIsland(grid);
+
+console.log('OUTPUT: ', findIsland(grid));
