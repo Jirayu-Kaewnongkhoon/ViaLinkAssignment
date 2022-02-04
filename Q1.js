@@ -5,8 +5,12 @@ const removeDuplicates = (nums) => {
 
 
     // วนลูปจนกว่าตำแหน่งของ index จะไปตรงกับค่า null อันแรก
-    // หรือ กรณีที่มันหาค่า null ไม่เจอ (ไม่ถูกลบเลขซ้ำออก)
     do {
+
+        // กรณีที่ index วนจนครบ array 'nums'
+        // นั่นคือ มันไม่มีเลขซ้ำแล้ว
+        // ให้จบลูป
+        if (index == nums.length) break;
 
         // ใช้เป็นเลขที่จะเอาไปค่าซ้ำใน array
         const num = nums[index];
@@ -32,7 +36,7 @@ const removeDuplicates = (nums) => {
         nums.push(null);
 
 
-    } while (index != nums.indexOf(null) && nums.indexOf(null) != -1);
+    } while (index != nums.indexOf(null));
 
 
     // ชุดตัวเลขที่ตัดเลขซ้ำออกใน array หลังการ modify จะอยู่ในช่วงก่อนค่า null
